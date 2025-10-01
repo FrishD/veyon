@@ -1,0 +1,50 @@
+stages:
+  - build
+  - collect
+
+build-linux:
+  stage: build
+  image: veyon/ci.linux.$DISTRO:latest
+  script:
+    - .ci/linux.$DISTRO/script.sh $CI_PROJECT_DIR /tmp
+  parallel:
+    matrix:
+      - DISTRO:
+        - centos.7.9
+        - debian.buster
+        - debian.bullseye
+        - fedora.36
+        - fedora.37
+        - opensuse.15.4
+        - opensuse.tumbleweed
+        - ubuntu.bionic
+        - ubuntu.focal
+        - ubuntu.jammy
+  artifacts:
+    paths: [ "veyon*" ]
+    expire_in: 1 day
+
+build-windows:
+  stage: build
+  image: $CI_REGISTRY/veyon/ci-mingw-w64:4.7
+  script:
+    - .ci/windows/build.sh $BITS
+  parallel:
+    matrix:
+      - BITS: [32, 64]
+  artifacts:
+    paths: [ veyon-win* ]
+    expire_in: 1 day
+
+collect-artifacts:
+  stage: collect
+  image: veyon/ci.linux.debian.buster:latest
+  dependencies: [ build-linux ]
+  only: [ tags ]
+  script:
+    - ls -la *.deb *.rpm
+  artifacts:
+    paths: [ "veyon*" ]
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
