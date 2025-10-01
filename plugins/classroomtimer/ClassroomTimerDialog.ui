@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Veyon Community</author>
+ <class>ClassroomTimerDialog</class>
+ <widget class="QDialog" name="ClassroomTimerDialog">
+  <property name="windowTitle">
+   <string>Start Classroom Timer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="classroomtimer.qrc">
+    <normaloff>:/classroomtimer/timer.png</normaloff>:/classroomtimer/timer.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Set the timer duration and choose whether to lock the screen upon completion.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="minutesLabel">
+       <property name="text">
+        <string>Minutes</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="minutesSpinBox">
+       <property name="maximum">
+        <number>59</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="secondsLabel">
+       <property name="text">
+        <string>Seconds</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="secondsSpinBox">
+       <property name="maximum">
+        <number>59</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="lockOnFinishCheckBox">
+     <property name="text">
+      <string>Lock screen on completion</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="classroomtimer.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ClassroomTimerDialog</receiver>
+   <slot>accept()</slot>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ClassroomTimerDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
+</ui>

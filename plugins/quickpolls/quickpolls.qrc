@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/quickpolls" >
+        <file>poll.png</file>
+    </qresource>
+</RCC>

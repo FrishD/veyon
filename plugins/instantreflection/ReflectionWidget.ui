@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReflectionWidget</class>
+ <widget class="QWidget" name="ReflectionWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>100</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Instant Reflection</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QPushButton" name="finishedButton">
+     <property name="text">
+      <string>Finished</string>
+     </property>
+     <property name="icon"/>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="needHelpButton">
+     <property name="text">
+      <string>Need Help</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="unclearButton">
+     <property name="text">
+      <string>Unclear</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="instantreflection.qrc"/>
+ </resources>
+ <connections/>
+</ui>

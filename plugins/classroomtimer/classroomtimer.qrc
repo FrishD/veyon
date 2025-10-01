@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/classroomtimer" >
+        <file>timer.png</file>
+    </qresource>
+</RCC>
