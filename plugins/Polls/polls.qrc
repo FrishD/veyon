@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/veyon/plugins/polls">
+        <file alias="polls.png">../../core/resources/help-about.png</file>
+    </qresource>
+</RCC>

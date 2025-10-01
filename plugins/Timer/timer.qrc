@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/veyon/plugins/timer">
+        <file alias="dialog-information.png">../../core/resources/toast-information.png</file>
+    </qresource>
+</RCC>

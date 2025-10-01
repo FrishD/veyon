@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/veyon/plugins/instant-reflection">
+        <file alias="reflection.png">../../core/resources/user-group-new.png</file>
+        <file alias="status-done.png">../../core/resources/toast-success.png</file>
+        <file alias="status-help.png">../../core/resources/toast-warning.png</file>
+        <file alias="status-unclear.png">../../core/resources/toast-error.png</file>
+    </qresource>
+</RCC>

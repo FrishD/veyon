@@ -1,0 +1,5 @@
+<RCC>
+  <qresource>
+    <file alias="CONTRIBUTORS">/app/build/CONTRIBUTORS</file>
+  </qresource>
+</RCC>
